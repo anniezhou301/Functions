@@ -5,7 +5,7 @@ void setup() {
 void draw() {
   blueSquare();
   drawCircle(mouseX,mouseY);
-  eraseMarks(70);
+  eraseMarks(100);
 }
 
 void drawRandomCircle() {
