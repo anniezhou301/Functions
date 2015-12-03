@@ -4,7 +4,7 @@ void setup() {
 }
 void draw() {
   blueSquare();
-  drawCircle();
+  drawCircle(mouseX,mouseY);
   eraseMarks(70);
 }
 
@@ -22,27 +22,29 @@ void blueSquare() {
   fill(0, 0, 255);
   rect(width/2-25, height/2-25, 50, 50);
 }
-
-void drawCircle() {
+//draws circle at mouse point
+void drawCircle(float x, float y) {
 
 
     fill(255, 255, 255);
-    ellipse(mouseX, mouseY, 30, 30);
-
+    ellipse(x, y, 30, 30);
+//press b for blue
     if (keyPressed && key== 'b') {
     fill(0, 0, 255);
-    ellipse(mouseX, mouseY, 30, 30);
+    ellipse(x, y, 30, 30);
   }
+  //press r for red
   if (keyPressed && key== 'r') {
     fill(255, 0, 0);
-    ellipse(mouseX, mouseY, 30, 30);
+    ellipse(x, y, 30, 30);
   }
+  //press g for green
   if (keyPressed && key== 'g') {
     fill(0, 255, 0);
-    ellipse(mouseX, mouseY, 30, 30);
+    ellipse(x,y, 30, 30);
   } 
 }
-
+//draws black when mouse is pressed
 void eraseMarks(int diam){
   if( mousePressed){
     fill(0);
